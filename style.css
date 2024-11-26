@@ -1,0 +1,289 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=The+Nautigal:wght@400;700&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=The+Nautigal:wght@400;700&family=Yanone+Kaffeesatz:wght@200..700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Times New Roman', Times, serif;
+    color:rgb(175, 36, 78);
+}
+/* button:hover{
+    background-color:rgb(175, 36, 78) ;
+    color:white;
+} */
+
+/* Nav starts here */
+
+nav{
+    position: fixed;
+    top:0;
+}
+
+nav .navbar-brand, nav a{
+    color:rgb(175, 36, 78);
+    text-decoration: none;
+}
+nav li a:hover{
+    color:rgb(221, 157, 176);
+    border-bottom: solid 2px rgb(221, 157, 176) ;
+}
+nav .navbar-brand{
+    font-family: "The Nautigal", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+nav form{
+    border-bottom: solid 2px rgb(152, 72, 72);
+}
+nav input{
+    border:none;
+    outline:none;
+    width:100px;
+}
+
+/* .navbar-toggler-icon{
+    outline:none;
+} */
+
+/* Main starts here */
+
+#main .row{
+    width:100%;
+    height:100vh;
+}
+.box{
+    background-image: url(img/bloom.jpg);
+    -webkit-background-size:cover;
+    background-size: cover;
+    background-position: center;
+    height:550px;
+    width:70%;
+    box-shadow: 0 20px 5px 5px rgba(0,0,0,0.2);
+    animation: animate 2s ease-in-out;
+    transition:all 1s ease-in-out;
+
+}
+@keyframes animate {
+    0% {transform: scale(0.5);}
+    100% {transform:scale(1.5);}
+}
+/* @keyframes animate{
+    0% {
+        border-radius: 60px 40% 30% 70% / 60% 30% 70% 40% ;
+    }
+    50%{
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60% ;
+    }
+    100%{
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40% ;
+    }
+} */
+
+#content{
+    height:100vh;
+
+}
+#main #content h1{
+    animation:animate 1s ease-in-out 1 forwards;
+    opacity: 0;
+}
+#main  #content h4{
+    animation:animate 1s ease-in-out 0.3s 1 forwards;
+    opacity:0;
+}
+#main #content button{
+    animation:animate 1s ease-in-out 0.6s 1 forwards;
+    opacity: 0;
+
+}
+@keyframes animate{
+    from{
+        opacity: 0;
+        transform: translate(0,100px);
+        filter:blur(33px)
+    }
+    to{
+        opacity:1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+
+/* Best sellers */
+
+@keyframes appear{
+    from{
+        opacity:0;
+        scale:0.5;
+    }
+    to{
+        opacity:1;
+        scale:1;
+    }
+}
+
+#view{
+    background-color: rgb(250, 241, 242);
+    padding:100px;
+    position: relative;
+}
+
+#view::before{
+    content:"BEST SELLERS";
+    position:absolute;
+    top:-1%;
+    font-size: 30px;
+}
+
+#view .card{
+    border:none;
+    animation: appear 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+
+}
+#view img:hover{
+    border:solid 2px rgb(175, 36, 78);
+}
+
+#view .card-body{
+    background-color: rgb(250, 241, 242) ;
+}
+
+#content button, .card button, #special button, #shade button{
+    width: 150px;
+    font-size: 15px;
+    background-color: transparent;
+    border:solid 1px rgb(175, 36, 78);
+    margin-top:50px;
+}
+#content button:hover, .card button:hover, #special button:hover , #shade button:hover {
+    background-color:rgb(175, 36, 78) ;
+    color:white;
+}
+
+/* Special starts  here */
+
+#special{
+    margin: 100px 0;
+}
+#special .row{
+    height:100vh;
+}
+
+#special #img1{
+    background-image: url(img/photo\ 1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat ;
+    background-position: bottom;
+}
+#special #img2{
+    background-image: url(img/photo\ 2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat ;
+    background-position: right;
+}
+#special h1, #shade span{
+    font-family: "The Nautigal", cursive;
+  font-weight: 1000;
+  font-size: 50px;
+  font-style: normal;
+
+}
+
+/* Shade starts here */
+
+#shade {
+    margin: 100px 0;
+    height:100vh;
+    
+}
+#shade .box1{
+    background-image: url(img/Shade1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat ;
+    background-position: center;
+    
+}
+#shade .box2{
+    background-image: url(img/shade2.webp);
+    background-size: cover;
+    background-repeat: no-repeat ;
+    background-position: center;
+   
+    
+}
+#shade .box3{
+    background-image: url(img/shade3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat ;
+    background-position: center;
+    
+}
+#shade .row{
+    height:70%;
+
+}
+#shade .col-lg-4{
+    margin:20px 0;
+    
+}
+div.box1:hover, div.box2:hover,  div.box3:hover  {
+    border:solid 2px black;
+}
+
+
+/* Footer starts here */
+footer{
+    background-color:rgb(250, 241, 242) ;
+    padding:10%;
+}
+footer form{
+    border-bottom: solid 2px rgb(152, 72, 72);
+    display:inline-block;
+    width:40%;
+}
+footer input{
+    border:none;
+    outline:none;
+   background-color: transparent;
+}
+footer button{
+    border:none;
+    background-color: transparent;
+}
+
+/* Login starts here */
+
+#login{
+    font-family: "Raleway", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    height:70vh;
+    margin-top:100px;
+}
+#login input{
+    border:none;
+    border-bottom:solid 2px rgb(152, 72, 72);
+}
+#login [type=button]{
+    background-color: rgb(152, 72, 72);
+    border:none;
+}
+#login input[value="Sign in"], #login input[value="Sign up"]{
+    color:white;
+}
+#login .form{
+    width:20%;
+}
+#login #col1{
+    border-right:solid 3px rgb(152, 72, 72);
+}
+#login .nav-link{
+    color:rgb(167, 168, 168);
+    font-size: 13px;
+}
